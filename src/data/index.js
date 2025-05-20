@@ -1,0 +1,1 @@
+export const professions = ['a software engineer','a full stack developer']
