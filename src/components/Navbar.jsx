@@ -64,13 +64,13 @@ const Navbar = () => {
             ))}
 
             {/* Dark Mode Toggle */}
-            <motion.button
+            {/* <motion.button
               onClick={toggleDarkMode}
               className="text-2xl text-gray-200 ml-4"
               whileTap={{ scale: 0.9 }}
             >
               {darkMode ? '☀️' : '🌙'}
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Hamburger */}
@@ -117,14 +117,14 @@ const Navbar = () => {
                     {link.name}
                   </motion.a>
                 ))}
-                <div className="px-4 pt-2">
+                {/* <div className="px-4 pt-2">
                   <button
                     onClick={toggleDarkMode}
                     className="text-xl text-gray-200"
                   >
                     {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
                   </button>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           )}

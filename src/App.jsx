@@ -1,11 +1,14 @@
 import React from 'react';
 import Hero from './components/Hero';
-const App = () => {
+import { ThemeProvider } from './context/ThemContext';
 
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <ThemeProvider>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Hero/> 
     </div>
+    </ThemeProvider>
   )
 
 }
