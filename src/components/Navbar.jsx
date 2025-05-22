@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import {Link} from 'react-scroll';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -50,17 +50,23 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
-              <motion.a
+              <Link
                 key={index}
-                href={link.href}
-                className={`relative group text-lg font-medium ${
+                to={link.href.replace('#', '')}
+                smooth={true}
+                duration={300}
+                offset={-70}
+                spy={true}
+                className={`relative group text-lg font-medium cursor-pointer ${
                   link.name === 'Home' ? 'text-yellow-500' : 'text-gray-200 hover:text-yellow-400'
                 } transition-colors duration-300`}
                 whileHover={{ scale: 1.05 }}
               >
+                <motion.span className='block' whileHover={{ scale: 1.05 }}>
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </motion.a>
+                </motion.span>
+              </Link>
             ))}
 
             {/* Dark Mode Toggle */}
@@ -103,19 +109,27 @@ const Navbar = () => {
             >
               <div className="pt-4 pb-6 space-y-4">
                 {navLinks.map((link, index) => (
-                  <motion.a
+                  <Link
+                    to={link.href.replace('#', '')}
                     key={index}
-                    href={link.href}
-                    className={`block px-4 py-2 text-xl ${
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    spy={true}
+                    className={`block px-4 py-2 text-xl cursor-pointer ${
                       link.name === 'Home' ? 'text-yellow-500' : 'text-gray-200'
-                    } font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300`}
+                    }  font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300`}
+                    onClick={() => setIsOpen(false)}
+
+                    >
+                  <motion.span  
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsOpen(false)}
                   >
                     {link.name}
-                  </motion.a>
+                    </motion.span>
+                  </Link>
                 ))}
                 {/* <div className="px-4 pt-2">
                   <button

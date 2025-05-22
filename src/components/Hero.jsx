@@ -22,7 +22,7 @@ const Hero = () => {
   }, [professions]);
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center  bg-gray-900">
+    <div id='home' className="w-full min-h-screen flex flex-col items-center  bg-gray-900">
       <Navbar />
       
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center px-4 w-full max-w-6xl gap-12">
