@@ -25,7 +25,7 @@ const About = () => {
         {/* Right Side (Image or Additional Content) */}
         <div className="lg:w-1/2 order-1 lg:order-2 flex items-center justify-center">
           <div className="bg-gray-800 p-8 rounded-lg w-full max-w-md">
-            <p className="text-gray-300 text-lg text-center sm:text-left">
+            <p className="text-gray-300 text-lg text-center sm:text-left text-yellow-500 hover:scale-105 transition-transform duration-300">
               Let's connect and create something amazing together!
             </p>
           </div>
