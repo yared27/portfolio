@@ -1,5 +1,8 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const Contact = () => {
     const form = React.useRef();
@@ -8,10 +11,10 @@ const Contact = () => {
         e.preventDefault();
         
         emailjs.sendForm(
-            'service_9uf21vz',  // Your Service ID
-            'template_hn8gofl',  // Your Template ID
+            process.env.service_id,
+            process.env.template_id,  // Your Service I                                 // Your Template ID
             form.current, 
-            'Z-JMVmJFHNg-GMq2b'  // Your Public Key (replace)
+            process.env.publick_id  // Your Public Key (replace)
         )
         .then((result) => {
             console.log('SUCCESS!', result.text);
