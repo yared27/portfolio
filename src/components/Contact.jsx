@@ -7,7 +7,7 @@ dotenv.config();
 const Contact = () => {
     const form = React.useRef();
 
-    const sendEmail = (e) => {  
+    const sendEmail = (e) => {   
         e.preventDefault();
         
         emailjs.sendForm(
