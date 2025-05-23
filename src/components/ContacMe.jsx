@@ -1,25 +1,21 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import dotenv from 'dotenv';
 
-dotenv.config();
-
-const Contact = () => {
+const ContactMe = () => {
+    
     const form = React.useRef();
-
     const sendEmail = (e) => {   
         e.preventDefault();
-        
         emailjs.sendForm(
-            process.env.service_id,
-            process.env.template_id,  // Your Service I                                 // Your Template ID
+            import.meta.env.VITE_SERVICE_ID,
+            import.meta.env.VITE_TEMPLATE_ID,
             form.current, 
-            process.env.publick_id  // Your Public Key (replace)
+            import.meta.env.VITE_PUBLIC_KEY
         )
         .then((result) => {
             console.log('SUCCESS!', result.text);
             alert('Message sent successfully!');
-            form.current.reset(); // Reset the form
+            form.current.reset();
         }, (error) => {
             console.log('FAILED...', error.text);
             alert('Failed to send message, please try again.');
@@ -32,13 +28,13 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail} className="flex flex-col lg:space-12 space-y-8">
                 <input 
                     type="email" 
-                    name="user_email"  // Required for EmailJS
+                    name="user_email"
                     placeholder='Email' 
                     className='md:w-[500px] w-[330px] h-13 pl-3 text-lg outline-0 border border-yellow-500 placeholder-yellow-500 caret-yellow-500 text-white' 
                     required
                 />
                 <textarea 
-                    name="message"  // Required for EmailJS
+                    name="message"
                     placeholder='Message' 
                     className='md:w-[500px] w-[330px] h-13 pl-3 text-lg outline-0 border border-yellow-500 placeholder-yellow-500 min-h-[100px] max-h-[200px] resize-y p-3 caret-yellow-500 text-white'
                     required
@@ -54,4 +50,4 @@ const Contact = () => {
     )
 }
 
-export default Contact;
+export default ContactMe;
