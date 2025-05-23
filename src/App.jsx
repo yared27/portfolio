@@ -1,6 +1,5 @@
 import React from 'react';
 import Hero from './components/Hero';
-import { ThemeProvider } from './context/ThemContext';
 import Services from './components/services';
 import About from './components/about';
 import Contact from './components/contact';
