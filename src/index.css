@@ -1,6 +1,27 @@
 @import "tailwindcss";
 
-* {
-  font-family: 'Manrope', serif;
+html,
+body,
+#root {
+  min-height: 100%;
 }
+
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.dark body {
+  background-color: #020617;
+  color: #f8fafc;
+}
+
 @custom-variant dark (&:where(.dark,.dark *));
