@@ -18,6 +18,25 @@ export const projects = [
     liveUrl: 'https://afya-g6.vercel.app/',
   },
   {
+  id: 2,
+  title: 'Student Service & Complaint Management System',
+  description:
+    'A full-stack university platform that streamlines student service requests and complaint management through role-based access, real-time notifications, analytics dashboards, and AI-assisted case triage, improving communication between students and university staff.',
+  image: student,
+  stack: [
+    'React',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
+    'Prisma',
+    'JWT',
+    'Tailwind CSS'
+  ],
+  category: 'Full Stack',
+  githubUrl: 'https://github.com/yared27/Student-Service-And-Complaint-Management-System-SSCMS-.git',
+  liveUrl: 'https://student-service-and-complaint-manag.vercel.app/',
+},
+  {
 
     id: 3,
     title: 'Digital Housing',
@@ -41,25 +60,7 @@ export const projects = [
     liveUrl: 'https://github.com/yared27/fleet_management.git/',
   },
  
-{
-  id: 2,
-  title: 'Student Service & Complaint Management System',
-  description:
-    'A full-stack university platform that streamlines student service requests and complaint management through role-based access, real-time notifications, analytics dashboards, and AI-assisted case triage, improving communication between students and university staff.',
-  image: student,
-  stack: [
-    'React',
-    'Node.js',
-    'Express.js',
-    'PostgreSQL',
-    'Prisma',
-    'JWT',
-    'Tailwind CSS'
-  ],
-  category: 'Full Stack',
-  githubUrl: 'https://github.com/yared27/Student-Service-And-Complaint-Management-System-SSCMS-.git',
-  liveUrl: 'https://student-service-and-complaint-manag.vercel.app/',
-}
+
 //   {
 //     id: 4,
 //     title: 'E-commerce Experience',
