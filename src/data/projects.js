@@ -2,6 +2,7 @@ import reactDashboardThumb from '../assets/react.svg';
 import dghousing from '../assets/dghousing.png';
 import fleet from '../assets/fleet.png';
 import fit from '../assets/fit.png';
+import student from '../assets/student.png';
 export const projects = [
   
   {
@@ -45,7 +46,7 @@ export const projects = [
   title: 'Student Service & Complaint Management System',
   description:
     'A full-stack university platform that streamlines student service requests and complaint management through role-based access, real-time notifications, analytics dashboards, and AI-assisted case triage, improving communication between students and university staff.',
-  image: sscms,
+  image: student,
   stack: [
     'React',
     'Node.js',
