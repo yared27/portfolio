@@ -21,7 +21,7 @@ export const projects = [
   id: 2,
   title: 'Student Service & Complaint Management System',
   description:
-    'A full-stack university platform that streamlines student service requests and complaint management through role-based access, real-time notifications, analytics dashboards, and AI-assisted case triage, improving communication between students and university staff.',
+  'A modern university platform for managing student services and complaints with role-based access, real-time notifications, and AI-assisted case management.',
   image: student,
   stack: [
     'React',
