@@ -3,6 +3,7 @@ import dghousing from '../assets/dghousing.png';
 import fleet from '../assets/fleet.png';
 import fit from '../assets/fit.png';
 export const projects = [
+  
   {
      
     id: 1,
@@ -17,7 +18,7 @@ export const projects = [
   },
   {
 
-    id: 2,
+    id: 3,
     title: 'Digital Housing',
     description:
       'Digital Housing is a web platform that simplifies finding, listing, and managing rental properties with a modern, user-friendly experience.',
@@ -28,7 +29,7 @@ export const projects = [
     liveUrl: 'https://digital-housing-v2.vercel.app/',
   },
   {
-    id: 3,
+    id: 4,
     title: 'fleet management system',
     description:
       'A fleet management system for managing and optimizing fleet operations, including vehicle tracking, maintenance scheduling, and driver management.',
@@ -39,7 +40,25 @@ export const projects = [
     liveUrl: 'https://github.com/yared27/fleet_management.git/',
   },
  
-
+{
+  id: 2,
+  title: 'Student Service & Complaint Management System',
+  description:
+    'A full-stack university platform that streamlines student service requests and complaint management through role-based access, real-time notifications, analytics dashboards, and AI-assisted case triage, improving communication between students and university staff.',
+  image: sscms,
+  stack: [
+    'React',
+    'Node.js',
+    'Express.js',
+    'PostgreSQL',
+    'Prisma',
+    'JWT',
+    'Tailwind CSS'
+  ],
+  category: 'Full Stack',
+  githubUrl: 'https://github.com/yared27/Student-Service-And-Complaint-Management-System-SSCMS-.git',
+  liveUrl: 'https://student-service-and-complaint-manag.vercel.app/',
+}
 //   {
 //     id: 4,
 //     title: 'E-commerce Experience',
